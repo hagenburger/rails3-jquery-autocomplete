@@ -188,6 +188,12 @@ If you are not using a FormBuilder (form_for) or you just want to include an aut
       autocomplete_field_tag 'address', '', address_autocomplete_path, :size => 75
     end
 
+You can add additional options via data attributes (e. g. if you use the [HTML extention](https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js) or want to change the [jQuery UI default options](http://jqueryui.com/demos/autocomplete/)). Use 'data-autocomplete-' + name of option:
+
+    form_tag 'some/path'
+      autocomplete_field_tag 'address', '', address_autocomplete_path, :'data-autocomplete-html' => true
+    end
+
 Now your autocomplete code is unobtrusive, Rails 3 style.
 
 ### Getting the object id
